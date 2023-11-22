@@ -19,7 +19,7 @@ jobs: #Задания, которые будет выполнять GitHab, ко
       - name: "Install project dependencies" #Установка зависимостей
         run: pip install -r requirements.txt #Блог ран - команда
       - name: "Run tests and code coverage analysis"
-        run: coverage run -m pytest --html=${{ env.PYTEST_REPORT_PATH }} --self-contained-html
+        run: coverage run pytest --html=${{ env.PYTEST_REPORT_PATH }} --self-contained-html
       - name: "Generate code coverage html report"
         run: coverage html --directory ${{ env.COVERAGE_HTML_REPORT_PATH }}
       - name: "Archive pytest and coverage reports"
