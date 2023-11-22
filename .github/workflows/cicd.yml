@@ -7,7 +7,7 @@ jobs: #Задания, которые будет выполнять GitHab, ко
     runs-on: ubuntu-latest # образ, который будет использоваться в интаграционной системы для данной job
     env:
       COVERAGE_HTML_REPORT_PATH: /tmp/coverage_html_report
-      PYTEST_REPORT_PATH: /tmp/pytest_report.html
+      PYTEST_REPORT_PATH: /tmp/report.html
     steps: # Шаги
       - name: "Checkout repository" #имя
         uses: actions/checkout@v3 #он берёт наш репозиторий и переносит его делать checkot образ делать какие-то дальнейшие шаги
