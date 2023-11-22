@@ -3,7 +3,7 @@ on: #Для каких событий должен срабатывать это
   push: #Срабатывание на push main, он должен запускаться и отрабатывать
     branches: [master]
 jobs: #Задания, которые будет выполнять GitHab, когда выполниться событие
-  test-and-coverage-package:
+  test-and-package:
     runs-on: ubuntu-latest # образ, который будет использоваться в интаграционной системы для данной job
     env:
       COVERAGE_HTML_REPORT_PATH: /tmp/coverage_html_report
